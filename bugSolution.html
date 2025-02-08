@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Correct usage of innerHTML, converting the element to a string before insertion
+    let newParagraph = document.createElement("p");
+    newParagraph.textContent = "This text should replace the previous text.";
+    document.getElementById("myDiv").innerHTML = newParagraph.outerHTML;
+    //Alternative solution using string manipulation:
+    //document.getElementById("myDiv").innerHTML = "<p>This text should replace the previous text.</p>";
+  </script>
+</body>
+</html>
