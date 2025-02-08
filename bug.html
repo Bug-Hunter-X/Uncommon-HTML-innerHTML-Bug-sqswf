@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    //Incorrect usage of innerHTML, attempting to insert an element directly without string conversion
+    document.getElementById("myDiv").innerHTML = <p>This text should replace the previous text.</p>;
+  </script>
+</body>
+</html>
